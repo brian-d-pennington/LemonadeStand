@@ -43,10 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerType.cs" />
+    <Compile Include="Days.cs" />
     <Compile Include="MainGame.cs" />
+    <Compile Include="OldiStore.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomCustomers.cs" />
+    <Compile Include="Seasons.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="WeekDays.cs" />
+    <Compile Include="WeekendDays.cs" />
+    <Compile Include="WholePaycheckStore.cs" />
+    <Compile Include="WorkingClass.cs" />
+    <Compile Include="YuppiesAndSuits.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

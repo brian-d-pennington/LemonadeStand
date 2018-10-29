@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class OldiStore:Store
+    class WholePaycheckStore:Store
     {
-        public int oldiMoldiBagOfLemons = 2;
-        public int oldiGallonOfBeetusSyrup = 2;
+        public int wholeOrganicLemons = 5;
+        public int wholeAgaveSyrupGallon = 7;
     }
 }

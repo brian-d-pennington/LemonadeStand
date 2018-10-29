@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Player
     {
         public string playerName;
-        private int playerBudget; // dollars, to start
+        private int playerBudget; 
 
         public int GameInProgressBudget
         {
@@ -35,6 +35,7 @@ namespace LemonadeStand
             Console.WriteLine("Please enter your name: ");
             playerName = Console.ReadLine();
             Console.WriteLine("Welcome to " + playerName + "'s Lemonade Stand!");
+            System.Threading.Thread.Sleep(2000);
         }
 
     }
