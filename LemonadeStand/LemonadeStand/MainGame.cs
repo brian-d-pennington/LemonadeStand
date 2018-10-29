@@ -32,7 +32,7 @@ namespace LemonadeStand
             if (toProceed == "no" || toProceed == "NO" || toProceed == "No")
             {
                 Console.WriteLine("Odd, but okay..");
-                //program exit
+                Environment.Exit(0);
             }
             Console.WriteLine("Every player will start with an unlimited supply of cups and work on the same busy downtown corner..");
             Console.WriteLine("(featuring all types: professionals, hourly workers, tourists, high end shoppers, etc.)..");
