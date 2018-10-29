@@ -10,10 +10,10 @@ namespace LemonadeStand
     {
         List<string> seasons = new List<string>() { "Winter", "Spring", "Summer", "Fall" };
 
-        public string seasonAssigned;
-        public int seasonTempRangeLo;
-        public int seasonTempRangeHi;
-        public int seasonHumidityAverage;
+        private string seasonAssigned;
+        private int seasonTempRangeLo;
+        private int seasonTempRangeHi;
+        private int seasonHumidityAverage;
 
         public Seasons()
         {
@@ -53,7 +53,7 @@ namespace LemonadeStand
             }
             else if (seasonAssigned == seasons[2])
             {
-                seasonTempRangeLo = 65;
+                seasonTempRangeLo = 75;
                 seasonTempRangeHi = 100;
                 seasonHumidityAverage = 60;
             }
@@ -64,8 +64,9 @@ namespace LemonadeStand
                 seasonHumidityAverage = 45;
             }
 
-            Console.WriteLine("The afternoon high ranges from " + seasonTempRangeLo + " to " + seasonTempRangeHi);
+            Console.WriteLine("The afternoon highs in " + seasonAssigned + " range from " + seasonTempRangeLo + " to " + seasonTempRangeHi);
             Console.WriteLine("with an average humidity of " + seasonHumidityAverage+ "%");
+            Console.WriteLine("-----------------------------------------------------------");
         }
     }
 

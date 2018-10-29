@@ -40,6 +40,11 @@ namespace LemonadeStand
                 System.Threading.Thread.Sleep(2000);
                 Environment.Exit(0);
             }
+            else if (toProceed.ToLower() != "yes")
+            {
+                Console.WriteLine("Please type more carefully.");
+                DisplayInstructions();
+            }
             Console.WriteLine("Every player will start with an unlimited supply of cups and work on the same busy downtown corner..");
             Console.WriteLine("(featuring all types: professionals, hourly workers, tourists, high end shoppers, etc.)..");
             Console.WriteLine("otherwise you get to choose the variables. Except for the season & daily weather.. can't control that ;)");
@@ -56,6 +61,19 @@ namespace LemonadeStand
             Console.WriteLine("like going out in nasty weather in expensive clothes as much. So.. your call.");
             Console.WriteLine("OK... NOW LET'S TAKE A LOOK AT WHAT SEASON YOU'LL BE WORKING IN......");
             System.Threading.Thread.Sleep(12000);
+        }
+
+        private void ChoiceOfStore()
+        {
+            Console.WriteLine("Ok, keep this weather in mind as you stock up on ingredients at the store.");
+            Console.WriteLine("(you will sell the most in warm weather obviously, but you can save on ice in cold weather, etc.)");
+            Console.WriteLine("Now, you need to decide on whether to shop at the OLDI to make a cheap, servicable lemonade..");
+            Console.WriteLine("or you can shop at the WHOLE PAYCHECK and buy fancy ingredients some people will pay more for.");
+            Console.WriteLine("RECIPE: it takes 1 bag of lemons and one gallon of syrup to serve 40 customers.");
+            Console.WriteLine("Ice is not required but your customers will pretty much insist on it in hot weather");
+            Console.WriteLine("Your business will open on a Monday, where you will get 150 potential weekday customers..");
+            Console.WriteLine("Weekend days are a little thinner at around 80 potential customers, but still enough to operate");
+            Console.WriteLine("Sooooo.. do you want to shop at OLDI or WHOLE PAYCHECK?");
         }
     }
 }
