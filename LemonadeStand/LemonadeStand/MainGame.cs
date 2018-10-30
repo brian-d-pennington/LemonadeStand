@@ -11,6 +11,7 @@ namespace LemonadeStand
         public Player player;
         public Seasons season;
         public Inventory inventory;
+        public Store store;
 
         public int roundCount = 0; // implemented to avoid redundant instructions
 
@@ -29,6 +30,8 @@ namespace LemonadeStand
             season.SeasonTempDisplay();
             ChoiceOfStore();
             inventory.CurrentInventory();
+            RoundCounter();
+            TripToTheStore();
             
         }
 
@@ -90,10 +93,12 @@ namespace LemonadeStand
             if (storeChoice.ToLower() == "oldi")
             {
                 player.playerStoreChoice = "oldi";
+                store = new OldiStore();
             }
             else if (storeChoice.ToLower() == "whole")
             {
                 player.playerStoreChoice = "whole";
+                store = new WholePaycheckStore();
             }
             else
             {
@@ -108,6 +113,22 @@ namespace LemonadeStand
         private int RoundCounter()
         {
             return roundCount++;
+        }
+        public void TripToTheStore()
+        {
+            Console.WriteLine("How many bags of lemons do you need to buy");
+            int lemonsToBuy = Int32.Parse(Console.ReadLine());
+            inventory.bagsOfLemons = lemonsToBuy + inventory.bagsOfLemons;
+
+            Console.WriteLine("How many gallons of syrup do you need to buy");
+            int gallonsOfSyrupToBuy = Int32.Parse(Console.ReadLine());
+            inventory.gallonsOfSweetener = gallonsOfSyrupToBuy + inventory.gallonsOfSweetener;
+
+            Console.WriteLine("How many bags of ice do you need to buy");
+            int bagsOfIceToBuy = Int32.Parse(Console.ReadLine());
+            inventory.bagsOfIceOnHand = bagsOfIceToBuy + inventory.bagsOfIceOnHand;
+            // shopping calculator
+            inventory.CurrentInventory();
         }
     }
 }

@@ -11,9 +11,11 @@ namespace LemonadeStand
         public int oldiMoldiBagOfLemons = 2;
         public int oldiGallonOfBeetusSyrup = 2;
 
-        public override void TripToTheStore(Player GameInProgressBudget)
+
+
+        public override void ShoppingCalculator()
         {
-            //
+            throw new NotImplementedException();
         }
     }
 

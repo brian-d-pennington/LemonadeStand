@@ -11,7 +11,7 @@ namespace LemonadeStand
         public int wholeOrganicLemons = 5;
         public int wholeAgaveSyrupGallon = 7;
 
-        public override void TripToTheStore(Player GameInProgressBudget)
+        public override void ShoppingCalculator()
         {
             throw new NotImplementedException();
         }

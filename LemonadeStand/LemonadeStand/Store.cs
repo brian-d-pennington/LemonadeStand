@@ -11,6 +11,14 @@ namespace LemonadeStand
         public int bagOfIce = 2;
 
 
-        public abstract void TripToTheStore(Player GameInProgressBudget);
+        public Store()
+        {
+        
+        }
+
+        public abstract void ShoppingCalculator();
+        
+
     }
 }
+
