@@ -9,9 +9,10 @@ namespace LemonadeStand
     class Player
     {
         public string playerName;
-        private int playerBudget; 
+        private int playerBudget;
+        public string playerStoreChoice; //can be changed daily
 
-        public int GameInProgressBudget
+        public int GameInProgressBudget 
         {
             get
             {

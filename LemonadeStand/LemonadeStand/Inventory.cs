@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    abstract class Store
+    class Inventory
     {
-        public int bagOfIce = 2;
-
-
-        public abstract void TripToTheStore(Player GameInProgressBudget);
     }
 }

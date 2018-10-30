@@ -23,6 +23,7 @@ namespace LemonadeStand
             GameOutline();
             season.SeasonGenerator();
             season.SeasonTempDisplay();
+            ChoiceOfStore();
             
         }
 
@@ -65,6 +66,8 @@ namespace LemonadeStand
 
         private void ChoiceOfStore()
         {
+            string storeChoice;
+
             Console.WriteLine("Ok, keep this weather in mind as you stock up on ingredients at the store.");
             Console.WriteLine("(you will sell the most in warm weather obviously, but you can save on ice in cold weather, etc.)");
             Console.WriteLine("Now, you need to decide on whether to shop at the OLDI to make a cheap, servicable lemonade..");
@@ -73,7 +76,22 @@ namespace LemonadeStand
             Console.WriteLine("Ice is not required but your customers will pretty much insist on it in hot weather");
             Console.WriteLine("Your business will open on a Monday, where you will get 150 potential weekday customers..");
             Console.WriteLine("Weekend days are a little thinner at around 80 potential customers, but still enough to operate");
-            Console.WriteLine("Sooooo.. do you want to shop at OLDI or WHOLE PAYCHECK?");
+            Console.WriteLine("Sooooo.. do you want to shop at OLDI or WHOLE PAYCHECK? type: 'OLDI' or 'Whole'");
+            storeChoice = Console.ReadLine();
+            if (storeChoice.ToLower() == "oldi")
+            {
+                player.playerStoreChoice = "oldi";
+            }
+            else if (storeChoice.ToLower() == "whole")
+            {
+                player.playerStoreChoice = "whole";
+            }
+            else
+            {
+                Console.Write("Not a valid choce.. try again. And now you get to read all this again ha ha");
+                System.Threading.Thread.Sleep(2000);
+                ChoiceOfStore();
+            }
         }
     }
 }
