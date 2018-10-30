@@ -9,6 +9,8 @@ namespace LemonadeStand
     abstract class Store
     {
         public int bagOfIce = 2;
+        public int shoppingBill;
+        public List<int> shoppingList = new List<int>();
 
 
         public Store()

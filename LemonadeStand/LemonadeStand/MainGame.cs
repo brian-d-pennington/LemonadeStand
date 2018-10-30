@@ -14,6 +14,7 @@ namespace LemonadeStand
         public Store store;
 
         public int roundCount = 0; // implemented to avoid redundant instructions
+        
 
         public MainGame()
         {
@@ -32,7 +33,8 @@ namespace LemonadeStand
             inventory.CurrentInventory();
             RoundCounter();
             TripToTheStore();
-            
+            store.ShoppingCalculator();
+            BudgetCheck();
         }
 
         private void DisplayInstructions()
@@ -69,7 +71,7 @@ namespace LemonadeStand
             Console.WriteLine("The high end buyers will pay more for quality stuff, but there might not be as many of them. Also, they don't");
             Console.WriteLine("like going out in nasty weather in expensive clothes as much. So.. your call.");
             Console.WriteLine("OK... NOW LET'S TAKE A LOOK AT WHAT SEASON YOU'LL BE WORKING IN......");
-            System.Threading.Thread.Sleep(12000);
+            System.Threading.Thread.Sleep(2000); //change back to 12000 later
         }
 
         private void ChoiceOfStore()
@@ -93,12 +95,10 @@ namespace LemonadeStand
             if (storeChoice.ToLower() == "oldi")
             {
                 player.playerStoreChoice = "oldi";
-                store = new OldiStore();
             }
             else if (storeChoice.ToLower() == "whole")
             {
-                player.playerStoreChoice = "whole";
-                store = new WholePaycheckStore();
+                player.playerStoreChoice = "whole paycheck";
             }
             else
             {
@@ -127,8 +127,20 @@ namespace LemonadeStand
             Console.WriteLine("How many bags of ice do you need to buy");
             int bagsOfIceToBuy = Int32.Parse(Console.ReadLine());
             inventory.bagsOfIceOnHand = bagsOfIceToBuy + inventory.bagsOfIceOnHand;
-            // shopping calculator
-            inventory.CurrentInventory();
+            store.shoppingList.Add(lemonsToBuy);
+            store.shoppingList.Add(gallonsOfSyrupToBuy);
+            store.shoppingList.Add(bagsOfIceToBuy);
+        }
+
+        private void BudgetCheck()
+        {
+            if (player.GameInProgressBudget - store.shoppingBill <= 0)
+            {
+                Console.WriteLine("Uh oh, you don't have the budget to make that purchase. Go back to the store.");
+                TripToTheStore();
+                store.ShoppingCalculator();
+                
+            }
         }
     }
 }

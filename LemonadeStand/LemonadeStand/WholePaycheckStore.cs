@@ -13,7 +13,11 @@ namespace LemonadeStand
 
         public override void ShoppingCalculator()
         {
-            throw new NotImplementedException();
+            int lemonBill = shoppingList[0] * wholeOrganicLemons;
+            int sugarBill = shoppingList[1] * wholeAgaveSyrupGallon;
+            int iceBill = shoppingList[2] * bagOfIce;
+            shoppingBill = lemonBill + sugarBill + iceBill;
+            Console.WriteLine("Your Whole Paycheck bill comes out to $" + shoppingBill);
         }
     }
 }
