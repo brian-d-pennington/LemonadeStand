@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="CustomerType.cs" />
     <Compile Include="Days.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="MainGame.cs" />
     <Compile Include="OldiStore.cs" />
     <Compile Include="Player.cs" />
@@ -56,7 +57,7 @@
     <Compile Include="WeekDays.cs" />
     <Compile Include="WeekendDays.cs" />
     <Compile Include="WholePaycheckStore.cs" />
-    <Compile Include="WorkingClass.cs" />
+    <Compile Include="WorkingPeople.cs" />
     <Compile Include="YuppiesAndSuits.cs" />
   </ItemGroup>
   <ItemGroup>
